@@ -26,8 +26,8 @@ int main () {
 		cout << "\t3 Hotel Occupancy\n";
 		cout << "\t4 Falling Distance\n";
 		cout << "\t5 Coin Toss\n";
-		cout << "\t0 Exit the program\n"
-			cout << "Select the number by the question you want to look at.\n";
+		cout << "\t0 Exit the program\n";
+		cout << "Select the number by the question you want to look at.\n";
 		cout << "Enter your Selection: ";
 		select = goodIn ( 0, 5);
 
