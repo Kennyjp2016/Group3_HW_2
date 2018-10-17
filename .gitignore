@@ -1,5 +1,20 @@
 # Prerequisites
 *.d
+# Other Visual Studio Extensions
+*.tlog
+*.exe
+*.obj
+*.pdb
+*.vcxproj
+*.log
+*.ilk
+*.sln
+*.filters
+*.user
+*.db
+*.opendb
+*.ipch
+*.suo
 
 # Compiled Object files
 *.slo
