@@ -4,6 +4,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 #include <chrono>
 #include <thread>
 #include "questions.h"
@@ -54,11 +55,20 @@ void testCoinFlip() {
 	cout << "Results stored in coinFlipTest.txt\n";
 }
 
+void testMemFeeMod () {
+	for (int i = 1; i <= 10; i ++) {
+		cout << "memFeeModified is passed: %" << i * 0.1 << ", " << i << " years and returns: \n";
+		memFeeModified(i * 0.1, i);
+	}
+}
+
 void drivers () {
 	bool exit = false;
 	while (exit == false) {
 		cout << "Testing the coin flips\n";
 		testCoinFlip();
+		cout << "Testing membership fee\n";
+		testMemFeeMod();
 		exit = exitPrompt();
 	}
 }

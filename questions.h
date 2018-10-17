@@ -11,4 +11,5 @@ void falling();
 void coinToss();
 void drivers();
 int OneOrTwo();
+void memFeeModified(double, int);
 #endif

@@ -26,6 +26,7 @@ int OneOrTwo () {
 }
 
 void coinToss() {
+	cls();
 	bool exit = false;
 	int coins;
 	while (exit == false) {
