@@ -8,6 +8,7 @@
 ** in a variable that can hold it, like a double or long
 */
 
+
 void sumofNum()
 {
 	double total_numbers, count, total_sum;

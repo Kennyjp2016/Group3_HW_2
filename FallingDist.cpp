@@ -3,6 +3,8 @@
 ** The function passes fallingDistance the values 1 through 10 as arguments
 ** and displays the return value
 */
+#include <iostream>
+using namespace std;
 
 float fallingDistance (float seconds);
 

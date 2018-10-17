@@ -10,11 +10,14 @@
 #include <iostream>
 #include <limits>
 #include "questions.h"
+#include "Drivers.h"
 #include "util.h"
 
 using namespace std;
 
 int main () {
+	//set the seed for rand;
+	srand(time(NULL));
 	bool exit = false;
 	int select;
 	while (exit == false) {
@@ -27,9 +30,10 @@ int main () {
 		cout << "\t4 Falling Distance\n";
 		cout << "\t5 Coin Toss\n";
 		cout << "\t0 Exit the program\n";
+		cout << "\t6 To run the tests\n";
 		cout << "Select the number by the question you want to look at.\n";
 		cout << "Enter your Selection: ";
-		select = goodIn ( 0, 5);
+		select = goodIn ( 0, 6);
 
 		switch (select) {
 			case 1:
@@ -49,6 +53,9 @@ int main () {
 				break;
 			case 0:
 				exit = true;
+				break;
+			case 6:
+				drivers();
 				break;
 			default:
 				cout << "That input didn't work.\n";
