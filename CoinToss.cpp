@@ -17,11 +17,11 @@ int OneOrTwo () {
 	int x;
 	//init a random seed
 	unsigned seed = time(0);
-	srand(seed);
 	int minVal = 1;
 	int maxVal = 2;
 	//generate either 0 or 1
 	x = ( rand() % (maxVal - minVal + 1)) + 1;
+	//pause a second so that the seed for rand is new next time the function is called
 	return x;
 }
 
@@ -40,8 +40,6 @@ void coinToss() {
 			} else {
 				cout << "Tails\n";
 			}
-			//pause a second so that the seed for rand is new
-			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
 		exit = exitPrompt();
 	}

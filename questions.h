@@ -9,4 +9,6 @@ void memFee();
 void hotel();
 void falling();
 void coinToss();
+void drivers();
+int OneOrTwo();
 #endif

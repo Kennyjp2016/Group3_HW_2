@@ -8,6 +8,6 @@
 ** in a variable that can hold it, like a double or long
 */
 
-void sumofNum(){
+void sumOfNum(){
 	//TODO
 }
