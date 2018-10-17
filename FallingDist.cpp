@@ -36,3 +36,23 @@ float fallingDistance (float seconds) {
 	d = 0.5 * g * t * t;
 	return d;
 }
+float fallingDistanceModified(float seconds, float initialHeight = 0) {
+	float currentHeight, currentTime;
+
+	for (int i = 1; i <= seconds; i++) {
+		cout << "Falling for " << i << " second.\n";
+		currentHeight = fallingDistance(i);
+		currentHeight = initialHeight - currentHeight;
+		if (currentHeight < 0) {
+			break;
+		}
+	}
+	if (currentHeight < 0) {
+		cout << "The object hit the ground" << endl;
+		return 0;
+	}
+	else {
+		cout << "The object's height above the ground is " << currentHeight << " meters." << endl;
+		return currentHeight;
+	}
+}
