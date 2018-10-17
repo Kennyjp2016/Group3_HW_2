@@ -4,22 +4,24 @@
 ** if the number is 1 the program displays heads and tails if 2
 */
 
+#include <chrono>
+#include <thread>
 #include <iostream>
-#include <iomanip>
-#include <stdlib.h>
-#include <time.h>
-#include <util.h>
+#include <cstdlib>
+#include <ctime>
+#include "util.h"
 
 using namespace std;
 
 int OneOrTwo () {
 	int x;
 	//init a random seed
-	srand(time(NULL));
+	unsigned seed = time(0);
+	srand(seed);
+	int minVal = 1;
+	int maxVal = 2;
 	//generate either 0 or 1
-	x = rand() % 2;
-	//incriment x so that it is wither 1 or 2
-	x++;
+	x = ( rand() % (maxVal - minVal + 1)) + 1;
 	return x;
 }
 
@@ -32,11 +34,14 @@ void coinToss() {
 		coins = goodIn(1, 100);
 
 		for (int i = 0; i < coins; i++) {
-			if ( OneOrTwo() == 1 ) {
+			int result = OneOrTwo();
+			if ( result == 1 ) {
 				cout << "Heads\n";
 			} else {
 				cout << "Tails\n";
 			}
+			//pause a second so that the seed for rand is new
+			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
 		exit = exitPrompt();
 	}
