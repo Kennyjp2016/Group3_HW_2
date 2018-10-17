@@ -29,11 +29,13 @@ int main () {
 		cout << "\t3 Hotel Occupancy\n";
 		cout << "\t4 Falling Distance\n";
 		cout << "\t5 Coin Toss\n";
+		cout << "\t6 MembershipFees Increase Modified\n";
+		cout << "\t7 Falling Distance Modified\n";
 		cout << "\t0 Exit the program\n";
-		cout << "\t6 To run the tests\n";
+		cout << "\t8 To run the tests\n";
 		cout << "Select the number by the question you want to look at.\n";
 		cout << "Enter your Selection: ";
-		select = goodIn ( 0, 6);
+		select = goodIn ( 0, 9);
 
 		switch (select) {
 			case 1:
@@ -51,10 +53,16 @@ int main () {
 			case 5:
 				coinToss();
 				break;
+			case 6:
+				memFeeModified();
+				break;
+			case 7:
+				fallingDistanceModified();
+				break;
 			case 0:
 				exit = true;
 				break;
-			case 6:
+			case 8:
 				drivers();
 				break;
 			default:
