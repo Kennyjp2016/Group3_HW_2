@@ -24,7 +24,7 @@ void hotel () {
 		int rooms = 0;
 		int occupied = 0;
 		cls();
-		cout << "Hou many floors does this hotel have? \n";
+		cout << "How many floors does this hotel have? \n";
 		floors = goodIn(1, 100);
 
 		for (int i = 0; i < floors; i++) {
@@ -45,7 +45,7 @@ void hotel () {
 		cout << "There are " << occupied << " occupied rooms\n";
 		cout << "There are " << rooms - occupied << " unoccupied rooms\n";
 		cout << showpoint << setprecision(2) << fixed;
-		double percent = occupied/(double)rooms;
+		double percent = (occupied/(double)rooms) * 100;
 		cout << "The percentage of rooms that are occupied is: " << percent << endl;
 		exit = exitPrompt();
 	}
