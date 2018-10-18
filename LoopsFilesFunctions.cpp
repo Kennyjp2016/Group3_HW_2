@@ -22,9 +22,9 @@ int main () {
 	//set the seed for rand;
 	srand(time(0));
 	bool exit = false;
-	int select;
-	double a, b;
-	float c, d;
+	int select, b;
+	double a;
+	float c, d, e;
 	while (exit == false) {
 		//clear the window
 		cls();
@@ -40,7 +40,7 @@ int main () {
 		cout << "\t8 To run the tests\n";
 		cout << "Select the number by the question you want to look at.\n";
 		cout << "Enter your Selection: ";
-		select = goodIn ( 0, 9);
+		select = goodIn ( 0, 8);
 
 		switch (select) {
 			case 1:
@@ -61,12 +61,12 @@ int main () {
 			case 6:
 				cout << "Enter the yearly increase then enter the number of years that increase will apply" << endl;
 				cin >> a >> b;
-				memFeeModified(a,b);
+				memFeeModified(a, b);
 				break;
 			case 7:
 				cout << "Enter the number of seconds the object is falling for then enter the initial height it will be starting from above the ground" << endl;
 				cin >> c >> d;
-				fallingDistanceModified(c,d);
+				e = fallingDistanceModified(c, d);
 				break;
 			case 0:
 				exit = true;
