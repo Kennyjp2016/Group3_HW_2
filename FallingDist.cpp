@@ -4,17 +4,20 @@
 ** and displays the return value
 */
 #include <iostream>
+#include "util.h"
 using namespace std;
 
 float fallingDistance (float seconds);
 float fallingDistanceModified(float seconds, float initialHeight = 0);
 
 void falling () {
+	bool exit = false;
 	//call fallingDistance repeatedly
 	for (int i = 1; i <= 10; i++) {
 		cout << "Falling for " << i << " second.\n";
 		cout << "The object fell " << fallingDistance(i) << " meters\n";
 	}
+	exit = exitPrompt();
 }
 
 /*
@@ -40,7 +43,7 @@ float fallingDistance (float seconds) {
 
 float fallingDistanceModified(float seconds, float initialHeight) {
 	float currentHeight, currentTime;
-
+	bool exit = false;
 	for (int i = 1; i <= seconds; i++) {
 		cout << "Falling for " << i << " second.\n";
 		currentHeight = fallingDistance(i);
@@ -51,10 +54,15 @@ float fallingDistanceModified(float seconds, float initialHeight) {
 	}
 	if (currentHeight < 0) {
 		cout << "The object hit the ground" << endl;
+		exit = exitPrompt();
 		return 0;
+		
 	}
 	else {
 		cout << "The object's height above the ground is " << currentHeight << " meters." << endl;
+		exit = exitPrompt();
 		return currentHeight;
+		
 	}
+	
 }

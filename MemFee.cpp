@@ -47,7 +47,7 @@ void memFee ()
 
 void memFeeModified (double yearly_increase, int years) {
 	double membership_fee = YEARLY_FEE;
-
+	bool exit = false;
 	int count;
 	count = 1;
 	cout << "Year " << count << " membership fees will be $" << membership_fee << endl;
@@ -57,4 +57,5 @@ void memFeeModified (double yearly_increase, int years) {
 		membership_fee += (membership_fee * yearly_increase);
 		cout << "Year " << count << " membership fees will be $" << membership_fee << endl;
 	}
+	exit = exitPrompt();
 }
