@@ -8,6 +8,7 @@ void sumOfNum();
 void memFee();
 void hotel();
 void falling();
+void fallingDistanceModified(float, float);
 void coinToss();
 void drivers();
 int OneOrTwo();

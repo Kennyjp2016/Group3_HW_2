@@ -7,6 +7,7 @@
 using namespace std;
 
 float fallingDistance (float seconds);
+float fallingDistanceModified(float seconds, float initialHeight = 0);
 
 void falling () {
 	//call fallingDistance repeatedly
@@ -36,7 +37,8 @@ float fallingDistance (float seconds) {
 	d = 0.5 * g * t * t;
 	return d;
 }
-float fallingDistanceModified(float seconds, float initialHeight = 0) {
+
+float fallingDistanceModified(float seconds, float initialHeight) {
 	float currentHeight, currentTime;
 
 	for (int i = 1; i <= seconds; i++) {

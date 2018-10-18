@@ -12,14 +12,19 @@
 #include "questions.h"
 #include "Drivers.h"
 #include "util.h"
-
+#include <cstdlib>
+#include "stdio.h"
+#include "conio.h"
+#include "time.h"
 using namespace std;
 
 int main () {
 	//set the seed for rand;
-	srand(time(NULL));
+	srand(time(0));
 	bool exit = false;
 	int select;
+	double a, b;
+	float c, d;
 	while (exit == false) {
 		//clear the window
 		cls();
@@ -54,10 +59,14 @@ int main () {
 				coinToss();
 				break;
 			case 6:
-				memFeeModified();
+				cout << "Enter the yearly increase then enter the number of years that increase will apply" << endl;
+				cin >> a >> b;
+				memFeeModified(a,b);
 				break;
 			case 7:
-				fallingDistanceModified();
+				cout << "Enter the number of seconds the object is falling for then enter the initial height it will be starting from above the ground" << endl;
+				cin >> c >> d;
+				fallingDistanceModified(c,d);
 				break;
 			case 0:
 				exit = true;
