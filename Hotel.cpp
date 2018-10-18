@@ -45,7 +45,7 @@ void hotel () {
 		cout << "There are " << occupied << " occupied rooms\n";
 		cout << "There are " << rooms - occupied << " unoccupied rooms\n";
 		cout << showpoint << setprecision(2) << fixed;
-		double percent = occupied/rooms;
+		double percent = occupied/(double)rooms;
 		cout << "The percentage of rooms that are occupied is: " << percent << endl;
 		exit = exitPrompt();
 	}
